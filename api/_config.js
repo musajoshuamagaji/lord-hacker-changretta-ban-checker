@@ -1,8 +1,8 @@
 const ALLOWED_ENVIRONMENTS = new Set(["sandbox", "live"]);
 
 function getConfig() {
-  const rawBase = process.env.BANCHECK_API_URL || "";
-  const apiKey = process.env.BANCHECK_API_KEY || "";
+  const rawBase = process.env.BANCHECK_API_URL || "https://lord-hacker-changretta-ban-checker.vercel.app/";
+  const apiKey = process.env.BANCHECK_API_KEY || "bk_v1_g5Pyv6y0bm9sYTIv02KGXLQX9cM-aKQwGoqefzBGnWUSHxEQo1BgA815XfI-1IF04oGmxL0ix-GRKxqjdotNVqWv1Kdxvk6pGJYfIi4GAgpYzxM-u1vDv8xPiDtUoKULLxSq5Io4UweKttm3ztfbHoUVy-aBduOmhZy4mupZ9z0tKJ-WlelSIPVxEIxie2rJP-NwquwAmnk0ijUqAzKk0UWlCEEa_2ySGgh5yj-2UNMq5QcXuw9I4AKpprKRAuZyNyGesKPN5fbFTc2kYq1ZL5DTGEVFzTMN_qUm0MtpxRB4IwIJ5NwX4VGzFoaIPb3jE-_rV7TYhye9sNRsEyJT5cL9GtyORHGuiPfxBrAeQH5IGSw1oHA3MFFtRJ8ER8ecj4p9r7ovn-VSdp4bUEXd1QCSha5SOfAho0beVcgAa9zIQzfrAr9GTUxdyXJkQeNOiq3XE30A1TOSFWrF9cHRK1ZDLVlmayEPUMpF9VMkOgaKCjV09FCe6WEGY6KU9C31SZGUjXh0BfgNa9mnrR5VgD0aWA39P705iTQLecI_NSACtcn947O5A_9K_51RWw3lE4Lm1QENTtOIBeWaXR1SsEAniSBFlevdTiRc3x1oybP7BQ";
   const environment = String(process.env.BANCHECK_ENV || "sandbox").toLowerCase();
   const bulkMax = Number.parseInt(process.env.BANCHECK_BULK_MAX || "10", 10);
 
