@@ -1,0 +1,7 @@
+{
+  "name": "lord-hacker-changretta-ban-checker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WhatsApp number ban status and appeal information dashboard",
+  "engines": { "node": ">=18" }
+}

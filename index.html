@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="WhatsApp number ban status checker and appeal information dashboard.">
+  <title>LORD HACKER CHANGRETTA — LORD OF BUGS BAN CHECKER</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Home">
+      <span class="brand-mark">CH</span>
+      <span><strong>LORD HACKER CHANGRETTA</strong><small>LORD OF BUGS · BAN CHECKER</small></span>
+    </a>
+    <div class="top-actions">
+      <span id="envBadge" class="env-badge">ENV: SANDBOX</span>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> WHATSAPP NUMBER INTELLIGENCE</div>
+      <h1>Check. Verify.<br><span>Know the status.</span></h1>
+      <p>Check individual numbers, process a permitted bulk list, and review available appeal information.</p>
+      <div class="hero-tags"><span>SECURE SERVER-SIDE API</span><span>REAL-TIME RESPONSE</span><span>PRIVATE KEY PROTECTION</span></div>
+    </section>
+
+    <section class="stats-grid" aria-label="Session statistics">
+      <article class="stat-card"><span>CHECKS THIS SESSION</span><strong id="statChecks">0</strong><small>Single and bulk entries</small></article>
+      <article class="stat-card"><span>BANNED RESULTS</span><strong id="statBanned">0</strong><small>From returned API results</small></article>
+      <article class="stat-card"><span>CLEAN RESULTS</span><strong id="statClean">0</strong><small>Reported not banned</small></article>
+    </section>
+
+    <section class="workspace">
+      <aside class="side-panel">
+        <div class="side-title">WORKSPACE</div>
+        <button class="nav-item active" data-tab="single"><span>⌕</span> Single check</button>
+        <button class="nav-item" data-tab="bulk"><span>▤</span> Bulk checker</button>
+        <button class="nav-item" data-tab="appeal"><span>◷</span> Appeal status</button>
+        <button class="nav-item" data-tab="submit"><span>✉</span> Submit appeal</button>
+        <div class="side-note"><span class="note-icon">!</span><p>Results reflect the connected provider's response. A result is not an official WhatsApp account-status guarantee.</p></div>
+      </aside>
+
+      <div class="main-panel">
+        <section class="tab-panel active" id="tab-single">
+          <div class="panel-heading"><div><div class="eyebrow">QUICK LOOKUP</div><h2>Single number check</h2><p>Enter a number with its country calling code.</p></div><span class="panel-icon">⌕</span></div>
+          <form id="singleForm" class="form-block">
+            <label for="singleNumber">WHATSAPP PHONE NUMBER</label>
+            <div class="input-row"><span class="prefix">＋</span><input id="singleNumber" type="tel" placeholder="491701234567" autocomplete="tel" required><button class="primary-btn" type="submit">Check number <span>→</span></button></div>
+            <small class="hint">Example: +491701234567. Include + and country code.</small>
+          </form>
+          <div id="singleResult" class="result-slot" aria-live="polite"></div>
+        </section>
+
+        <section class="tab-panel" id="tab-bulk">
+          <div class="panel-heading"><div><div class="eyebrow">MULTI LOOKUP</div><h2>Bulk number checker</h2><p>One number per line. Provider plan limits apply.</p></div><span class="panel-icon">▤</span></div>
+          <form id="bulkForm" class="form-block">
+            <label for="bulkNumbers">PHONE NUMBERS</label>
+            <textarea id="bulkNumbers" rows="7" placeholder="+491701234567&#10;+15551234567&#10;+2348012345678" required></textarea>
+            <div class="form-footer"><small class="hint" id="bulkCount">0 numbers entered</small><button class="primary-btn" type="submit">Check list <span>→</span></button></div>
+          </form>
+          <div id="bulkResult" class="result-slot" aria-live="polite"></div>
+        </section>
+
+        <section class="tab-panel" id="tab-appeal">
+          <div class="panel-heading"><div><div class="eyebrow">RECORD LOOKUP</div><h2>Appeal status</h2><p>Look up an appeal record returned by the provider.</p></div><span class="panel-icon">◷</span></div>
+          <form id="appealForm" class="form-block">
+            <label for="appealPhone">WHATSAPP PHONE NUMBER</label>
+            <div class="input-row"><span class="prefix">＋</span><input id="appealPhone" type="tel" placeholder="491701234567" required><button class="primary-btn" type="submit">Look up <span>→</span></button></div>
+          </form>
+          <div id="appealResult" class="result-slot" aria-live="polite"></div>
+        </section>
+
+        <section class="tab-panel" id="tab-submit">
+          <div class="panel-heading"><div><div class="eyebrow">USER-INITIATED ACTION</div><h2>Submit an appeal</h2><p>Only submit a truthful appeal for an account you own or are authorized to represent.</p></div><span class="panel-icon">✉</span></div>
+          <div id="sandboxWarning" class="warning-box">Appeal submission is disabled while the project is configured for sandbox mode.</div>
+          <form id="submitForm" class="form-block">
+            <label for="submitPhone">WHATSAPP PHONE NUMBER</label>
+            <input id="submitPhone" type="tel" placeholder="+491701234567" required>
+            <label for="appealText">APPEAL MESSAGE <span class="muted">(10–4000 characters)</span></label>
+            <textarea id="appealText" rows="6" minlength="10" maxlength="4000" placeholder="Explain the situation clearly and truthfully..." required></textarea>
+            <label class="check-row"><input id="isEu" type="checkbox"> This number is associated with an EU region</label>
+            <label class="check-row confirm-row"><input id="confirmAppeal" type="checkbox" required> I have reviewed this message and authorize one appeal submission.</label>
+            <button class="primary-btn" id="submitAppealBtn" type="submit">Review and submit appeal <span>→</span></button>
+          </form>
+          <div id="submitResult" class="result-slot" aria-live="polite"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="history-section">
+      <div class="history-heading"><div><div class="eyebrow">LOCAL SESSION</div><h2>Recent checks</h2></div><button id="clearHistory" class="text-btn">Clear history</button></div>
+      <div id="historyList" class="history-list"><div class="empty-state">Your recent checks will appear here.</div></div>
+    </section>
+
+    <footer><span class="footer-brand">LORD HACKER CHANGRETTA · LORD OF BUGS</span><span>Use responsibly. No developer credit displayed.</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/site.js"></script>
+</body>
+</html>
